@@ -20,7 +20,7 @@ const CreateBook = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post('https://bookstore-server-po8m.onrender.com/api/v1/create', {
+      const res = await axios.post('https://cloud-online-bookstore-app-c-z3qr.onrender.com/api/v1/create', {
         title,
         genre,
         author,
