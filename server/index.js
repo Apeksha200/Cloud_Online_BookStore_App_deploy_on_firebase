@@ -15,14 +15,17 @@ const morgan=require("morgan");
 
 
 //middleware
+const cors = require('cors');
+
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://mern-book-store-client.vercel.app', 'https://bookstore.nishantpatil.me/'],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
+  origin: 'https://cloud-online-bookstore-c.onrender.com', // 👈 Allow only your frontend URL
+  credentials: true // if you're using cookies/auth, otherwise skip this
 }));
 
 
+
 // app.use(cors());
+app.use(cors());
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(morgan("dev"));
