@@ -15,7 +15,7 @@ const DeleteBook = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.delete(`https://bookstore-server-po8m.onrender.com/api/v1/delete/${id}`);
+      const res = await axios.delete(`https://cloud-online-bookstore-app-c-z3qr.onrender.com/api/v1/delete/${id}`);
       enqueueSnackbar('Book deleted successfully', { variant: 'success' });
       navigate('/');
     } catch (error) {
