@@ -21,7 +21,7 @@ const UpdateBook = () => {
     const fetchBook = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`https://bookstore-server-po8m.onrender.com/api/v1/book/${id}`);
+        const res = await axios.get(`https://cloud-online-bookstore-app-c-z3qr.onrender.com/api/v1/book/${id}`);
         const { title, genre, author, year, pages, publisher } = res.data.data;
         setTitle(title);
         setGenre(genre);
@@ -47,7 +47,7 @@ const UpdateBook = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.put(`https://bookstore-server-po8m.onrender.com/api/v1/update/${id}`, {
+      const res = await axios.put(`https://cloud-online-bookstore-app-c-z3qr.onrender.com/api/v1/update/${id}`, {
         title,
         genre,
         author,
